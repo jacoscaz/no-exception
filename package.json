@@ -1,0 +1,39 @@
+{
+  "name": "no-exception",
+  "version": "0.0.1",
+  "description": "A library that support developers in writing exception-free TypeScript applications",
+  "main": "dist/cjs/no-exception.js",
+  "module": "dist/esm/no-exception.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test",
+    "clean": "rm -rf dist/",
+    "build:es": "tsc -p tsconfig.esm.json && echo '{\"type\": \"module\"}' > dist/esm/package.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json && echo '{\"type\": \"commonjs\"}' > dist/cjs/package.json",
+    "build": "npm run clean && npm run build:es && npm run build:cjs"
+  },
+  "author": "Jacopo Scazzosi <jacopo@scazzosi.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  },
+  "files": [
+    "./dist/**/*.js",
+    "./dist/**/*.d.ts"
+  ],
+  "homepage": "https://github.com/jacoscaz/no-exception",
+  "bugs": "https://github.com/jacoscaz/no-exception/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacoscaz/no-exception.git"
+  },
+  "keywords": [
+    "exception",
+    "type-safe",
+    "error",
+    "handling",
+    "uncaught",
+    "rejection"
+  ]
+}
