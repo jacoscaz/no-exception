@@ -18,10 +18,6 @@
     "@types/node": "^20.12.7",
     "typescript": "^5.4.5"
   },
-  "files": [
-    "./dist/**/*.js",
-    "./dist/**/*.d.ts"
-  ],
   "homepage": "https://github.com/jacoscaz/no-exception",
   "bugs": "https://github.com/jacoscaz/no-exception/issues",
   "repository": {
