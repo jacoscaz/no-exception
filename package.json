@@ -1,12 +1,12 @@
 {
   "name": "no-exception",
-  "version": "0.0.1",
-  "description": "A library that support developers in writing exception-free TypeScript applications",
+  "version": "0.1.0",
+  "description": "Library that implements a crash early, crash hard approach to handling unexpected failure conditions",
   "main": "dist/cjs/no-exception.js",
   "module": "dist/esm/no-exception.js",
   "type": "commonjs",
   "scripts": {
-    "test": "node --test",
+    "test": "node --test ./dist/esm/*.spec.js",
     "clean": "rm -rf dist/",
     "build:es": "tsc -p tsconfig.esm.json && echo '{\"type\": \"module\"}' > dist/esm/package.json",
     "build:cjs": "tsc -p tsconfig.cjs.json && echo '{\"type\": \"commonjs\"}' > dist/cjs/package.json",
@@ -26,7 +26,6 @@
   },
   "keywords": [
     "exception",
-    "type-safe",
     "error",
     "handling",
     "uncaught",
